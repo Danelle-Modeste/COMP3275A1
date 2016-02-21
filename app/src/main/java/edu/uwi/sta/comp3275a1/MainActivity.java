@@ -1,13 +1,14 @@
 package edu.uwi.sta.comp3275a1;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,12 +19,42 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        ListView functions = (ListView)findViewById(R.id.function_list);
+        functions.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+                Intent i;
+                if(position==0){
+                    i=new Intent(MainActivity.this,UIComponents.class);
+                }
+                else if(position==1){
+                    i=new Intent(MainActivity.this,Layouts.class);
+                }
+                else if(position==2){
+                    i=new Intent(MainActivity.this,Dialogs.class);
+                }
+                else if(position==3){
+                    i=new Intent(MainActivity.this,Toast_Snackbar.class);
+                }
+                else if(position==4){
+                    i=new Intent(MainActivity.this,BundleActivity.class);
+                }
+                else if(position==5){
+                    i=new Intent(MainActivity.this,ResultActivity.class);
+                }
+                else if(position==6){
+                    i=new Intent(MainActivity.this,CustomAdapter.class);
+                }
+                else if(position==7){
+                    i=new Intent(MainActivity.this,Fragments.class);
+                }
+                else if(position==8){
+                    i=new Intent(MainActivity.this,ActionBar_Menu.class);
+                }
+                else{ //if(position==10){
+                    i=new Intent(MainActivity.this,MasterDetail.class);
+                }
+                startActivity(i);
             }
         });
     }
@@ -49,4 +80,6 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }
