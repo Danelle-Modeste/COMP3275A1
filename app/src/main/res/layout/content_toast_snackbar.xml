@@ -10,6 +10,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="edu.uwi.sta.comp3275a1.Toast_Snackbar"
-    tools:showIn="@layout/activity_toast_snackbar">
+    tools:showIn="@layout/activity_toast_snackbar"
+    android:id="@+id/snackbarLayout">
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/msg_type_list"
+        android:entries="@array/messageType"/>
 </RelativeLayout>
