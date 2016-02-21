@@ -12,4 +12,11 @@
     tools:context="edu.uwi.sta.comp3275a1.Dialogs"
     tools:showIn="@layout/activity_dialogs">
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/dialog_list"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:entries="@array/dialogList"/>
 </RelativeLayout>

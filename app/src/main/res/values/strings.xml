@@ -33,4 +33,41 @@
         <item> SnackBar</item>
         <item> SnackBar Action</item>
     </string-array>
+
+    <string-array name="dialogList">
+        <item> Alert</item>
+        <item> Confirm</item>
+        <item> Date</item>
+        <item> List</item>
+        <item> Multiple Choice List</item>
+    </string-array>
+
+    <string-array name="items_available">
+        <item> Dell Laptop </item>
+        <item> IPhone</item>
+        <item>IPad</item>
+        <item>LCD Television</item>
+    </string-array>
+
+
+    <string-array name="items_description">
+        <item> A brand new Dell Laptop </item>
+        <item> A used IPhone 6. Still functional and no external scratches </item>
+        <item>A new IPad </item>
+        <item>A new Samsung Smart LCD Television </item>
+    </string-array>
+
+    <string-array name="items_images">
+        <item>@drawable/laptop_icon</item>
+        <item>@drawable/iphone_icon </item>
+        <item>@drawable/ipad_icon </item>
+        <item>@drawable/television_icon </item>
+    </string-array>
+
+    <string-array name="Fragment">
+        <item> Fragment</item>
+        <item> View Pager</item>
+        <item> WebView Fragment</item>
+    </string-array>
+
 </resources>
