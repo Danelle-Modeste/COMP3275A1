@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 else if(position==6){
                     i=new Intent(MainActivity.this,CustomAdapter.class);
                 }
-                else if(position==8){
+                else if(position==7){
                     i=new Intent(MainActivity.this,ActionBar_Menu.class);
                 }
                 startActivity(i);
