@@ -8,9 +8,7 @@
     <string name="title_activity_bundle">Bundle</string>
     <string name="title_activity_result">Result</string>
     <string name="title_activity_custom_adapter">CustomAdapter</string>
-    <string name="title_activity_fragment">Fragment</string>
     <string name="title_activity_action_bar__menu">ActionBar_Menu</string>
-    <string name="title_activity_master_detail">MasterDetail</string>
     <string name="title_activity_uicomponents">UIComponents</string>
 
 
@@ -22,9 +20,7 @@
         <item> Activity Bundle</item>
         <item> Activity for Result</item>
         <item> Custom Adapter</item>
-        <item> Fragment</item>
         <item> Action Bar and Menus</item>
-        <item> Master/Detail Layout</item>
     </string-array>
 
     <string-array name="messageType">
@@ -62,12 +58,6 @@
         <item>@drawable/iphone_icon </item>
         <item>@drawable/ipad_icon </item>
         <item>@drawable/television_icon </item>
-    </string-array>
-
-    <string-array name="Fragment">
-        <item> Fragment</item>
-        <item> View Pager</item>
-        <item> WebView Fragment</item>
     </string-array>
 
 </resources>

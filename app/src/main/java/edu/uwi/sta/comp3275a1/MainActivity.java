@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         functions.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id){
-                Intent i;
+                Intent i= new Intent(MainActivity.this,MainActivity.class);
                 if(position==0){
                     i=new Intent(MainActivity.this,UIComponents.class);
                 }
@@ -45,14 +45,8 @@ public class MainActivity extends AppCompatActivity {
                 else if(position==6){
                     i=new Intent(MainActivity.this,CustomAdapter.class);
                 }
-                else if(position==7){
-                    i=new Intent(MainActivity.this,Fragments.class);
-                }
                 else if(position==8){
                     i=new Intent(MainActivity.this,ActionBar_Menu.class);
-                }
-                else{ //if(position==10){
-                    i=new Intent(MainActivity.this,MasterDetail.class);
                 }
                 startActivity(i);
             }

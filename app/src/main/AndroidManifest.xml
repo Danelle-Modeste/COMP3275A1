@@ -8,6 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -18,47 +19,46 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        />
+
         <activity
             android:name=".Layouts"
             android:label="@string/title_activity_layouts"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".Dialogs"
             android:label="@string/title_activity_dialogs"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".Toast_Snackbar"
             android:label="@string/title_activity_toast__snackbar"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".ResultActivity"
             android:label="@string/title_activity_result"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".CustomAdapter"
             android:label="@string/title_activity_custom_adapter"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Fragments"
-            android:label="@string/title_activity_fragment"
-            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".ActionBar_Menu"
             android:label="@string/title_activity_action_bar__menu"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".MasterDetail"
-            android:label="@string/title_activity_master_detail"
-            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".BundleActivity"
             android:label="@string/title_activity_bundle"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".UIComponents"
             android:label="@string/title_activity_uicomponents"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
