@@ -5,11 +5,18 @@
     <string name="title_activity_layouts">Layouts</string>
     <string name="title_activity_dialogs">Dialogs</string>
     <string name="title_activity_toast__snackbar">Toast_Snackbar</string>
-    <string name="title_activity_bundle">Bundle</string>
+    <string name="title_activity_bundle">Bundle Activity</string>
+    <string name="title_activity_bundle2">Bundle Activity 2</string>
     <string name="title_activity_result">Result</string>
-    <string name="title_activity_custom_adapter">CustomAdapter</string>
+    <string name="title_activity_custom_adapter">Custom Adapter</string>
     <string name="title_activity_action_bar__menu">ActionBar_Menu</string>
-    <string name="title_activity_uicomponents">UIComponents</string>
+    <string name="title_activity_uicomponents">UI Components</string>
+    <string name="bundle_favSong">Favourite Song</string>
+    <string name="bundle_edit_favSong">Enter your favourite song</string>
+    <string name="bundle_nextbtn">Next</string>
+    <string name="bundle2_artist">Song Artist</string>
+    <string name="bundle2_prevbtn">Previous</string>
+    <string name="bundle_edit_songArtist">Enter song artist</string>
 
 
     <string-array name="func_list">
