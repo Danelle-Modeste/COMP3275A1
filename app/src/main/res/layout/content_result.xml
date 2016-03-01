@@ -12,4 +12,34 @@
     tools:context=".ResultActivity"
     tools:showIn="@layout/activity_result">
 
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/result_prevbtn"
+        android:id="@+id/result_btn"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="213dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/result_edittxt"
+        android:inputType="text"
+        android:hint="@string/result_artist"
+        android:layout_above="@+id/result_btn"
+        android:layout_alignStart="@+id/result_maintxt"
+        android:layout_alignEnd="@+id/result_maintxt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/bundle_edit_songArtist"
+        android:id="@+id/result_maintxt"
+        android:layout_above="@+id/result_edittxt"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center" />
 </RelativeLayout>
