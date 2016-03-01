@@ -13,34 +13,34 @@
     tools:context="edu.uwi.sta.comp3275a1.BundleActivity"
     tools:showIn="@layout/activity_bundle">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/bundle_nextbtn"
-        android:id="@+id/bundle_btn"
-        android:layout_gravity="center_horizontal"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="213dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/bundle_edittxt"
-        android:layout_above="@+id/bundle_btn"
-        android:inputType="text"
-        android:layout_alignEnd="@+id/bundle_maintxt"
-        android:layout_alignStart="@+id/bundle_maintxt"
-        android:hint="@string/bundle_favSong" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/bundle_edit_favSong"
-        android:id="@+id/bundle_maintxt"
-        android:layout_above="@+id/bundle_edittxt"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/birthdate_prompt"
+        android:id="@+id/bundle_txtView"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="97dp"
         android:textAlignment="center" />
 
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nextActivity"
+        android:id="@+id/bundle_btn"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/birthMonth"
+        android:layout_above="@+id/bundle_btn"
+        android:layout_centerHorizontal="true"
+        android:hint="MM" />
 </RelativeLayout>

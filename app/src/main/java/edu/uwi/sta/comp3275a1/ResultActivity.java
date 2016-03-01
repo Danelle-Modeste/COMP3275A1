@@ -14,35 +14,38 @@ public class ResultActivity extends AppCompatActivity {
     private Button button;
     private String intentString;
 
-    @Override
+   @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        editText = (EditText)findViewById(R.id.result_edittxt);
-        button = (Button)findViewById(R.id.result_btn);
+       editText = (EditText)findViewById(R.id.result);
+       button = (Button)findViewById(R.id.finish_btn);
 
-        button.setOnClickListener(new View.OnClickListener(){
+       button.setOnClickListener(new View.OnClickListener(){
 
-            public void onClick(View view){
+           public void onClick(View view){
 
-                intentString = editText.getText().toString();
+               intentString = editText.getText().toString();
 
-                Intent intent = new Intent();
-                intent.putExtra("returnKey",editText.getText().toString());
-                setResult(RESULT_OK,intent);
-                finish();
-            }
-        });
+               Intent intent = new Intent();
+               intent.putExtra("returnKey",editText.getText().toString());
+               setResult(RESULT_OK,intent);
 
-        intentString = savedInstanceState!=null ? savedInstanceState.getString("sendKey"):null;
-        if(intentString == null){
-            Bundle extras = getIntent().getExtras();
-            intentString = extras!=null ? extras.getString("sendKey"): "nothing passed in";
-        }
+               finish();
+           }
+
+       });
+
+       intentString = savedInstanceState!= null ? savedInstanceState.getString("bundleKey"):null;
+
+       if (intentString == null) {
+
+           Bundle extras = getIntent().getExtras();
+           intentString = extras != null ? extras.getString("bundleKey") : "nothing passed in";
+       }
         editText.setText(intentString);
-    }
-
+   }
 }
