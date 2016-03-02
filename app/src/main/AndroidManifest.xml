@@ -50,10 +50,6 @@
             android:name=".UIComponents"
             android:label="@string/title_activity_uicomponents"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".BundleActivity2"
-            android:label="@string/title_activity_bundle2"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
