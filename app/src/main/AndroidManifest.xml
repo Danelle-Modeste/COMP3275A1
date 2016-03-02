@@ -18,6 +18,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ActionBar_Menu"
+            android:label="@string/title_activity_action_bar__menu"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
         <activity
             android:name=".Layouts"
             android:label="@string/title_activity_layouts"
@@ -37,10 +44,6 @@
         <activity
             android:name=".CustomAdapter"
             android:label="@string/title_activity_custom_adapter"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".ActionBar_Menu"
-            android:label="@string/title_activity_action_bar__menu"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".BundleActivity"

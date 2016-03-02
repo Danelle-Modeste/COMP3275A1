@@ -26,6 +26,9 @@ public class Toast_Snackbar extends AppCompatActivity {
 
         View main=this.getWindow().getDecorView();
 
+        //displays a list view of the different toasts and snackbar options
+        //if a particular item is chosen within the list view, then that toast/snackbar is displayed
+
         final ListView msg_type= (ListView)findViewById(R.id.msg_type_list);
         msg_type.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
