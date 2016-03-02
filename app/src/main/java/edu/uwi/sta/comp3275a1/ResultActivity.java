@@ -21,6 +21,7 @@ public class ResultActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+       //associates the button and edittext to the relevant ids
         editText = (EditText)findViewById(R.id.result);
         button = (Button)findViewById(R.id.finish_btn);
 
@@ -31,24 +32,37 @@ public class ResultActivity extends AppCompatActivity {
                intentString = editText.getText().toString();
 
                Intent intent = new Intent();
+
+               //add "returnKey" as a key and assign it the value in the edit text field
                intent.putExtra("returnKey",getMonth(editText));
+
+               //RESULT_OK will tell the caller that we have successfully accomplished our task
                setResult(RESULT_OK,intent);
 
+               //closes the activity
                finish();
            }
 
        });
 
+       //if the activity is being resumed
        intentString = savedInstanceState!= null ? savedInstanceState.getString("bundleKey"):null;
 
        if (intentString == null) {
 
+           //get bundle out of intent
            Bundle extras = getIntent().getExtras();
+
+           //check to see if "bundleKey" is in the bundle, if so then assign it's value to intentString.
+           // if not, assign "nothing passed in" to intentString
            intentString = extras != null ? extras.getString("bundleKey") : "nothing passed in";
        }
+
+        //set the edit text to display the intentString
         editText.setText(intentString);
    }
 
+    //given the numerical value for a month, the string word is returned
     public String getMonth(EditText editText){
 
         String month = editText.getText().toString();

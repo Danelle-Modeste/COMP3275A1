@@ -28,6 +28,10 @@ public class Dialogs extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //displays a list view of the different dialog options
+        //if a particular item is chosen within the list view, then that dialog is displayed
+        //the dialog is displayed by calling the specified dialog
+
         ListView dialogs=(ListView)findViewById(R.id.dialog_list);
         dialogs.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -47,6 +51,7 @@ public class Dialogs extends AppCompatActivity {
         });
     }
 
+    //displays an alert dialog
     public void showAlert(){
 
         AlertDialog.Builder alert= new  AlertDialog.Builder(Dialogs.this);
@@ -54,6 +59,7 @@ public class Dialogs extends AppCompatActivity {
         alert.show();
     }
 
+    //displays a confirmation dialog, the user has a negative and a positive selection
     public void showConfirm(){
 
         AlertDialog.Builder confirm = new AlertDialog.Builder(Dialogs.this);
@@ -73,7 +79,7 @@ public class Dialogs extends AppCompatActivity {
         });
         confirm.show();
     }
-
+    //displays the date picker dialog, when the date is selected a tiast displays the selected date
     public void showDate(){
 
         final Calendar cal = Calendar.getInstance();
@@ -94,6 +100,8 @@ public class Dialogs extends AppCompatActivity {
 
     String selectedItem=null;
 
+    //displays a list dialog, the user is given the option to select a single option
+    //after they have selected an option, a toast displays the option selected
     public void showList(){
 
         AlertDialog.Builder list  = new AlertDialog.Builder(Dialogs.this);
@@ -123,6 +131,9 @@ public class Dialogs extends AppCompatActivity {
     }
 
     ArrayList<Integer> selectedItems=new ArrayList<>();
+
+    //displays a list dialog, the user is given the option to select a single option
+    //after they have selected an option, a toast displays the option selected
     public void showMultiList(){
 
         AlertDialog.Builder multiList  = new AlertDialog.Builder(Dialogs.this);

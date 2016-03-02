@@ -19,34 +19,33 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //displays a list view of the different menu options
+        //if a particular item is chosen within the list view, then that menu option is displayed
+        //the activity is displayed by calling the specified activity class
+
+
         ListView functions = (ListView)findViewById(R.id.function_list);
         functions.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
-                Intent i= new Intent(MainActivity.this,MainActivity.class);
-                if(position==0){
-                    i=new Intent(MainActivity.this,UIComponents.class);
-                }
-                else if(position==1){
-                    i=new Intent(MainActivity.this,Layouts.class);
-                }
-                else if(position==2){
-                    i=new Intent(MainActivity.this,Dialogs.class);
-                }
-                else if(position==3){
-                    i=new Intent(MainActivity.this,Toast_Snackbar.class);
-                }
-                else if(position==4){
-                    i=new Intent(MainActivity.this,BundleActivity.class);
-                }
-                else if(position==5){
-                    i=new Intent(MainActivity.this,ResultActivity.class);
-                }
-                else if(position==6){
-                    i=new Intent(MainActivity.this,CustomAdapter.class);
-                }
-                else if(position==7){
-                    i=new Intent(MainActivity.this,ActionBar_Menu.class);
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Intent i = new Intent(MainActivity.this, MainActivity.class);
+                if (position == 0) {
+                    i = new Intent(MainActivity.this, UIComponents.class);
+                } else if (position == 1) {
+                    i = new Intent(MainActivity.this, Layouts.class);
+                } else if (position == 2) {
+                    i = new Intent(MainActivity.this, Dialogs.class);
+                } else if (position == 3) {
+                    i = new Intent(MainActivity.this, Toast_Snackbar.class);
+                } else if (position == 4) {
+                    i = new Intent(MainActivity.this, BundleActivity.class);
+                } else if (position == 5) {
+                    i = new Intent(MainActivity.this, ResultActivity.class);
+                } else if (position == 6) {
+                    i = new Intent(MainActivity.this, CustomAdapter.class);
+                } else if (position == 7) {
+                    i = new Intent(MainActivity.this, ActionBar_Menu.class);
                 }
                 startActivity(i);
             }

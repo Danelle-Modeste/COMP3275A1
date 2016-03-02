@@ -20,6 +20,10 @@ public class UIComponents extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
     }
+
+    //saves the data the user has provided in the registration form
+    //then displays that data at the bottom of the form
+
     public void SaveUserData(View view){
         TextView userName = (TextView)findViewById(R.id.txt_username);
         TextView password = (TextView)findViewById(R.id.txt_password);
