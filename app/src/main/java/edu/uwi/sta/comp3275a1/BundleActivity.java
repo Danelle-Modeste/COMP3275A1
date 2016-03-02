@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class BundleActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -24,24 +25,41 @@ public class BundleActivity extends AppCompatActivity implements View.OnClickLis
         editText = (EditText)findViewById(R.id.birthMonth);
         button = (Button)findViewById(R.id.bundle_btn);
         button.setOnClickListener(this);
+        button.setClickable(true);
     }
 
     public boolean checkBirthMonth(EditText editText){
-        return Integer.parseInt(editText.toString()) >0 && Integer.parseInt(editText.toString()) <13;
-
+        Integer num;
+        if(editText.getText().toString().equals("")){
+            return false;
+        }
+        else {
+            num = Integer.parseInt(editText.getText().toString());
+            return (num > 0 && num < 13);
+        }
     }
 
     public void onClick(View view) {
         if (view == button) {
+            if(checkBirthMonth(editText)) {
 
-            //create a new intent and specify the target class
-            Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+                //disables the button after it has been clicked
+                button.setClickable(false);
 
-            //assigns the editText data to the key "bundleKey"
-            intent.putExtra("bundleKey", editText.getText().toString());
+                //create a new intent and specify the target class
+                Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
 
-            //launches next activity and sends the intent along with it
-            startActivityForResult(intent, RESULT_ACTIVITY_REQUEST_CODE);
+                //assigns the editText data to the key "bundleKey"
+                intent.putExtra("bundleKey", editText.getText().toString());
+
+                //launches next activity and sends the intent along with it
+                startActivityForResult(intent, RESULT_ACTIVITY_REQUEST_CODE);
+            }
+
+            else{
+                String msg = "Invalid month entered or no input was entered";
+                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+            }
         }
     }
 
@@ -52,8 +70,10 @@ public class BundleActivity extends AppCompatActivity implements View.OnClickLis
 
         if(requestCode == RESULT_ACTIVITY_REQUEST_CODE) {
 
-            if (resultCode == RESULT_OK)
+            if (resultCode == RESULT_OK) {
                 editText.setText(extras.getString("returnKey"));
+
+            }
             else
                 editText.setText("nothing returned");
         }

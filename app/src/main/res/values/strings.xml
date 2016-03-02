@@ -10,9 +10,9 @@
     <string name="title_activity_custom_adapter">Custom Adapter</string>
     <string name="title_activity_action_bar__menu">ActionBar_Menu</string>
     <string name="title_activity_uicomponents">UI Components</string>
-    <string name="birthdate_prompt">Enter your numerical value for your birth month below:</string>
+    <string name="birthdate_prompt">Enter your numerical value for your birth month below. Your string word birth month will be returned</string>
     <string name="nextActivity">Continue</string>
-    <string name="birthMonth">Birth Month</string>
+    <string name="birthMonth">Birth Month (number). Your string word birth month will be returned to the 1st activity</string>
     <string name="finishBtn">Finish</string>
 
 

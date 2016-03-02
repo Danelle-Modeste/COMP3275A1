@@ -21,17 +21,17 @@ public class ResultActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-       editText = (EditText)findViewById(R.id.result);
-       button = (Button)findViewById(R.id.finish_btn);
+        editText = (EditText)findViewById(R.id.result);
+        button = (Button)findViewById(R.id.finish_btn);
 
-       button.setOnClickListener(new View.OnClickListener(){
+        button.setOnClickListener(new View.OnClickListener(){
 
            public void onClick(View view){
 
                intentString = editText.getText().toString();
 
                Intent intent = new Intent();
-               intent.putExtra("returnKey",editText.getText().toString());
+               intent.putExtra("returnKey",getMonth(editText));
                setResult(RESULT_OK,intent);
 
                finish();
@@ -48,4 +48,35 @@ public class ResultActivity extends AppCompatActivity {
        }
         editText.setText(intentString);
    }
+
+    public String getMonth(EditText editText){
+
+        String month = editText.getText().toString();
+
+        if(month.equals("1"))
+            return "January";
+        else if(month.equals("2"))
+            return "February";
+        else if(month.equals("3"))
+            return "March";
+        else if(month.equals("4"))
+            return "April";
+        else if(month.equals("5"))
+            return "May";
+        else if(month.equals("6"))
+            return "June";
+        else if(month.equals("7"))
+            return "July";
+        else if(month.equals("8"))
+            return "August";
+        else if(month.equals("9"))
+            return "September";
+        else if(month.equals("10"))
+            return "October";
+        else if(month.equals("11"))
+            return "November";
+        else
+            return "December";
+
+    }
 }
