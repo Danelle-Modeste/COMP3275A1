@@ -10,7 +10,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class CustomAdapter extends AppCompatActivity {
-
+    ListView itemList;
+    adapter customAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,14 +19,13 @@ public class CustomAdapter extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+       /* itemList=(ListView)findViewById(R.id.listView);
+        //customAdapter=new adapter(this)
+        String[] menuList = { "HOME", "PREFERENCES", "VIEW MAP","LOG OUT"};
+        Integer[] icons = {R.drawable.home2,R.drawable.settings2,R.drawable.view2,R.drawable.logout2};
+
+        CustomListAdapter Adapter= new CustomListAdapter(this, menuList, icons);
+        DrawerList.setAdapter(Adapter);*/
     }
 
     public void ShowDesc(View view){
